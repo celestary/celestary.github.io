@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+html {
+    width: 100%;
+    margin: 0 auto;
+    background: #b8dfe6;
+    /* Fills the page */
+    position: relative;
+    /* Fix for absolute positioning */
+    display: block;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "メイリオ", "Meiryo", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", verdana, arial, clean, sans-serif;
+    font-size: 14px;
+    line-height: 165%;
+    color: #363636;
+}
+
+body,
+html {
+    height: 100%;
+    width: 1000px;
+    text-align: left
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: .5s;
+}
+
+a::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 4px;
+    background-color: #31aae2;
+    transition: .3s;
+    transform: translateX(-50%);
+}
+
+a:hover::after {
+    width: 100%;
+}

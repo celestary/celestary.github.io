@@ -1,0 +1,31 @@
+body {
+    padding: 40px;
+    color: #606366;
+    background: #f0f8ff;
+    font-family: 'Roboto Condensed', 'M PLUS 1p', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+a {
+    color: #606366;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+}
+
+a::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 4px;
+    background-color: #99cfff;
+    transition: .6s;
+    transform: translateX(-50%);
+}
+
+a:hover::after {
+    width: 100%;
+}
